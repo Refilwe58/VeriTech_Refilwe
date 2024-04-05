@@ -1,0 +1,134 @@
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.header-section h2 {
+    background-color: rgb(168, 63, 146);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+.divider {
+    border-top: 2px dotted rgb(197, 40, 163);
+    width: 66%;
+    margin: 20px auto;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h5 {
+    background-color: rgb(197, 40, 163);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.col {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    max-width: 300px;
+}
+
+.headers {
+    margin: auto;
+    width: 40%;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.box {
+    max-width: 500px;
+    height: 200px;
+    position: relative;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.box-middle {
+    top: 1100px;
+}
+
+
+/*ribbon*/
+
+.ribbon-2 {
+    --f: 10px;
+    /* control the folded part*/
+    --r: 15px;
+    /* control the ribbon shape */
+    --t: 10px;
+    /* the top offset */
+    position: absolute;
+    top: var(--t);
+    right: calc(-1 * var(--f));
+    padding: 0 10px var(--f) calc(10px + var(--r));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%, calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)), var(--r) calc(50% - var(--f) / 2));
+    background: rgb(168, 63, 146);
+    box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
+    width: 150px;
+    height: 80px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .col {
+        flex: 1 0 100%;
+        margin: 10px 0;
+    }
+    .header-section {
+        padding: 10px;
+    }
+    .header-section p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* .header-section h1 {
+            font-size: 20px; */
+    /* Further decrease font size for smaller screens */
+    /* }
+     */
+    .header-section p {
+        font-size: 12px;
+    }
+}
